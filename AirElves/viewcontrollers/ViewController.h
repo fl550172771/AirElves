@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITabBar *tabbar;
 
+@property (strong, nonatomic) IBOutlet UITabBarItem *tabBarAdd;
+@property (strong, nonatomic) IBOutlet UITableView *mainTableList;
 
 @end
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Group1</key>
+	<array>
+		<dict>
+			<key>text_icon</key>
+			<string>set_voice</string>
+			<key>text_label</key>
+			<string>set_voice</string>
+		</dict>
+		<dict>
+			<key>text_icon</key>
+			<string>set_shake</string>
+			<key>text_label</key>
+			<string>set_shake</string>
+		</dict>
+	</array>
+	<key>Group2</key>
+	<array>
+		<dict>
+			<key>text_icon</key>
+			<string>set_language</string>
+			<key>text_label</key>
+			<string>set_language</string>
+		</dict>
+	</array>
+	<key>Group3</key>
+	<array>
+		<dict>
+			<key>text_icon</key>
+			<string>set_help</string>
+			<key>text_label</key>
+			<string>set_help</string>
+		</dict>
+	</array>
+	<key>Group4</key>
+	<array>
+		<dict>
+			<key>text_icon</key>
+			<string>set_feedback</string>
+			<key>text_label</key>
+			<string>set_feedback</string>
+		</dict>
+	</array>
+	<key>Group5</key>
+	<array>
+		<dict>
+			<key>text_icon</key>
+			<string>set_about</string>
+			<key>text_label</key>
+			<string>set_about</string>
+		</dict>
+	</array>
+</dict>
+</plist>

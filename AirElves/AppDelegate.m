@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "XLSlideMenu.h"
+#import "ViewController.h"
+#import "PersonalsViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,11 +19,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self initRootView];
     return YES;
 }
-
-
+-(void)initRootView{
+    //创建滑动菜单
+    //主界面
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ViewController *vc = [storyboard instantiateInitialViewController];
+    //配置NavigationBar
+    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [rootNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbarBackImage"] forBarMetrics:UIBarMetricsDefault];
+    rootNav.navigationBar.tintColor = [UIColor whiteColor];
+    [rootNav.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, nil]];
+    PersonalsViewController *leftVC = [[PersonalsViewController alloc]initWithNibName:@"PersonalsViewController" bundle:[NSBundle mainBundle]];
+    XLSlideMenu *slideMenu = [[XLSlideMenu alloc] initWithRootViewController:rootNav];
+    //设置左右菜单
+    slideMenu.leftViewController = leftVC;
+    self.window.rootViewController = slideMenu;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
